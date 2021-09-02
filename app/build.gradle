@@ -1,0 +1,121 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.tbsurvey.trlbhxf"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters 'armeabi-v7a'//,'x86' 'armeabi',
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    compile(name: 'spatialite', ext: 'aar')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.navigation:navigation-fragment:2.2.2'
+    implementation 'androidx.navigation:navigation-ui:2.2.2'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // debugImplementation because LeakCanary should only run in debug builds.
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.3'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    //Rxjava
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.8'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'com.jakewharton.rxbinding4:rxbinding-core:4.0.0'
+    implementation 'com.jakewharton.rxbinding4:rxbinding-appcompat:4.0.0'
+    /*网络请求框架*/
+    api 'com.squareup.retrofit2:retrofit:2.4.0'
+    api 'com.squareup.retrofit2:converter-gson:2.4.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    api 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+    /*Rx生命周期管理*/
+    api 'com.trello.rxlifecycle2:rxlifecycle:2.2.0'
+    api 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.0'
+    //引入ButterKnife
+    implementation "com.jakewharton:butterknife:10.0.0"
+    annotationProcessor "com.jakewharton:butterknife-compiler:10.0.0"
+
+    implementation 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.10'
+    //权限
+    implementation 'com.github.hotchemi:permissionsdispatcher:2.3.1'
+    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.3.1'
+    //Log
+    implementation 'com.orhanobut:logger:2.2.0'
+    //Toast
+    implementation 'com.github.GrenderG:Toasty:1.5.0'
+    //Bugly
+    implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'
+//其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+    // room数据库
+    def room_version = "2.1.0-alpha05"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    // For Kotlin use kapt instead of annotationProcessor
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation "androidx.room:room-ktx:$room_version"
+    // optional - RxJava support for Room
+    implementation "androidx.room:room-rxjava2:$room_version"
+    //多ITEM recyclerview
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
+
+    //多选
+    implementation 'com.github.gzu-liyujiang.AndroidPicker:Common:3.1.0'
+    implementation 'com.github.gzu-liyujiang.AndroidPicker:WheelPicker:3.1.0'
+
+    implementation 'net.cachapa.expandablelayout:expandablelayout:2.8'
+    //下载
+    implementation 'com.arialyy.aria:core:3.8.5'
+    annotationProcessor 'com.arialyy.aria:compiler:3.8.5'
+    //文件选择
+    implementation 'com.leon:lfilepickerlibrary:1.8.0'
+    //PictureSelector图片选择
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.6.1'
+
+    def nav_version = "2.3.0"
+
+// Java language implementation
+
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+
+    //适配
+    implementation 'me.jessyan:autosize:1.2.1'
+}

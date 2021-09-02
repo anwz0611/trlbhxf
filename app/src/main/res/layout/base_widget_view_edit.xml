@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_widget_view_edit_linerview"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="7dp"
+    android:orientation="vertical"
+
+  >
+
+
+    <LinearLayout
+        android:id="@+id/edit_widget_two"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/main_edit_shadow_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/edit_widget_ceju"
+            android:layout_width="45dp"
+            android:layout_height="42.5dp"
+            android:background="@drawable/zoom_button_topcorner">
+
+            <ImageView
+                android:id="@+id/util_img"
+                android:layout_width="@dimen/edit_btnsize2"
+                android:layout_height="@dimen/edit_btnsize2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:padding="2dp"
+                android:scaleType="fitXY"
+                android:textOff=" "
+                android:textOn=" "
+                app:srcCompat="@mipmap/edit_ceju" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/util_img"
+                android:layout_centerHorizontal="true"
+                android:text="测距"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size4" />
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="31.5dp"
+            android:layout_height="1dp"
+            android:background="#293341FF"
+            tools:ignore="Suspicious0dp" />
+        <RelativeLayout
+            android:id="@+id/edit_widget_cemian"
+            android:layout_width="45dp"
+            android:layout_height="42.5dp"
+            android:background="@drawable/zoom_button_topcorner"
+            >
+
+            <ImageView
+                android:id="@+id/style_img"
+                android:layout_width="@dimen/edit_btnsize2"
+                android:layout_height="@dimen/edit_btnsize2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:padding="2dp"
+                android:scaleType="fitXY"
+                android:textOff=" "
+                android:textOn=" "
+                app:srcCompat="@mipmap/edit_cemian" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/style_img"
+                android:layout_centerHorizontal="true"
+                android:text="测面"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size4" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

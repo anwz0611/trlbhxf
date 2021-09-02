@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:id="@+id/cardview"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:orientation="horizontal"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardElevation="2dp"
+    card_view:contentPadding="2dp"
+    card_view:cardBackgroundColor="#1E293341"
+    android:layout_marginBottom="8dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+    <TextView
+        android:id="@+id/gd_item_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="林场(分场)编号:"
+        android:layout_marginLeft="10dp"
+        android:textSize="@dimen/text_size2"
+        android:textColor="@color/white"/>
+
+
+        <com.github.gzuliyujiang.wheelview.widget.WheelView
+            android:id="@+id/wheel_view"
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:wheel_atmosphericEnabled="true"
+            app:wheel_curvedEnabled="true"
+            app:wheel_curvedIndicatorSpace="4dp"
+            app:wheel_curvedMaxAngle="60"
+            app:wheel_indicatorColor="#FF0081FF"
+            app:wheel_itemSpace="50dp"
+            app:wheel_itemTextColor="#FF474747"
+            app:wheel_itemTextColorSelected="#FF0081FF"
+            app:wheel_itemTextSize="20sp" />
+
+            />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

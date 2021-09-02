@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ViewAttr">
+        <attr name="show_text" format="boolean"/>
+        <attr name="button_width" format="dimension"/>
+        <attr name="button_height" format="dimension"/>
+        <attr name="is_horizontal" format="boolean"/>
+        <attr name="view_background" format="color|reference"/>
+        <attr name="font_color" format="color|reference"/>
+        <attr name="font_size" format="integer"/>
+
+        <attr name="zoom_in_num" format="integer"/>
+        <attr name="zoom_out_num" format="integer"/>
+        <attr name="zoom_in_text" format="string"/>
+        <attr name="zoom_out_text" format="string"/>
+        <attr name="zoom_out_image" format="reference"/>
+        <attr name="zoom_in_image" format="reference"/>
+
+        <attr name="map_rotate_num" format="integer"/>
+        <attr name="map_rotate_image" format="reference"/>
+        <attr name="map_rotate_text" format="string"/>
+
+        <attr name="measure_prev_text" format="string"/>
+        <attr name="measure_next_text" format="string"/>
+        <attr name="measure_length_text" format="string"/>
+        <attr name="measure_area_text" format="string"/>
+        <attr name="measure_clear_text" format="string"/>
+        <attr name="measure_end_text" format="string"/>
+        <attr name="measure_prev_image" format="reference"/>
+        <attr name="measure_next_image" format="reference"/>
+        <attr name="measure_length_image" format="reference"/>
+        <attr name="measure_area_image" format="reference"/>
+        <attr name="measure_clear_image" format="reference"/>
+        <attr name="measure_end_image" format="reference"/>
+
+        <attr name="drawing_line_text" format="string"/>
+        <attr name="drawing_polygon_text" format="string"/>
+        <attr name="drawing_orthogon_text" format="string"/>
+        <attr name="drawing_circle_text" format="string"/>
+        <attr name="drawing_ellipse_text" format="string"/>
+        <attr name="drawing_rhombus_text" format="string"/>
+        <attr name="drawing_line_image" format="reference"/>
+        <attr name="drawing_polygon_image" format="reference"/>
+        <attr name="drawing_orthogon_image" format="reference"/>
+        <attr name="drawing_circle_image" format="reference"/>
+        <attr name="drawing_ellipse_image" format="reference"/>
+        <attr name="drawing_rhombus_image" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="MyHomeToolsBg">
+        <attr name="text" format="string"/>
+    </declare-styleable>
+
+    <!--IconImageView-->
+    <declare-styleable name="IconImageView">
+        <!--图标的资源-->
+        <attr name="iiv_icon_res" format="reference" />
+        <!--图标缩放的比例, 默认是0.5-->
+        <attr name="iiv_icon_scale" format="float" />
+        <!--图标是否显示, 默认是true-->
+        <attr name="iiv_is_show" format="boolean" />
+    </declare-styleable>
+    <!--MaterialProgressBar-->
+    <declare-styleable name="MaterialProgressBar">
+        <!-- 进度条的样式：环形或水平，默认是环形-->
+        <attr name="mpb_progressStyle" format="enum">
+            <enum name="circular" value="0" />
+            <enum name="horizontal" value="1" />
+        </attr>
+        <!--无论进度 determinate（确定）或 indeterminate（不确定）的drawables都可以设置在进度条上，默认是false-->
+        <attr name="mpb_setBothDrawables" format="boolean" />
+        <!--是否使用进度条内部的padding，默认为true-->
+        <attr name="mpb_useIntrinsicPadding" format="boolean" />
+        <!--进度条是否必须有背景，水平进度条默认是true，环形进度条默认是false-->
+        <attr name="mpb_showProgressBackground" format="boolean" />
+        <!--进度确定的环形进度条样式：normal和dynamic，默认是normal-->
+        <attr name="mpb_determinateCircularProgressStyle" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="dynamic" value="1" />
+        </attr>
+
+        <!-- ********************进度确定的进度条色调************** -->
+        <!--进度条的主色调-->
+        <attr name="mpb_progressTint" format="color|reference" />
+        <!--进度条色调的叠加模式, 默认无。详见：http://www.jianshu.com/p/d11892bbe055-->
+        <attr name="mpb_progressTintMode" format="enum">
+            <!--在目标图像上层绘制源图像-->
+            <enum name="src_over" value="3" />
+            <!--在两者相交的地方绘制源图像，并且绘制的效果会受到目标图像对应地方透明度的影响-->
+            <enum name="src_in" value="5" />
+            <!--源图像和目标图像相交处绘制源图像，不相交的地方绘制目标图像，并且相交处的效果会受到源图像和目标图像alpha的影响-->
+            <enum name="src_atop" value="9" />
+            <!--正片叠底，即查看每个通道中的颜色信息，并将基色与混合色复合。结果色总是较暗的颜色，任何颜色与黑色复合产生黑色，任何颜色与白色复合保持不变，当用黑色或白色以外的颜色绘画时，绘画工具绘制的连续描边产生逐渐变暗的颜色。-->
+            <enum name="multiply" value="14" />
+            <!--滤色，滤色模式与我们所用的显示屏原理相同，所以也有版本把它翻译成屏幕；简单的说就是保留两个图层中较白的部分，较暗的部分被遮盖；当一层使用了滤色（屏幕）模式时，图层中纯黑的部分变成完全透明，纯白部分完全不透明，其他的颜色根据颜色级别产生半透明的效果。-->
+            <enum name="screen" value="15" />
+            <!--滤色，滤色模式与我们所用的显示屏原理相同，所以也有版本把它翻译成屏幕；简单的说就是保留两个图层中较白的部分，较暗的部分被遮盖；当一层使用了滤色（屏幕）模式时，图层中纯黑的部分变成完全透明，纯白部分完全不透明，其他的颜色根据颜色级别产生半透明的效果。-->
+            <enum name="add" value="16" />
+        </attr>
+        <!--进度条的次色调-->
+        <attr name="mpb_secondaryProgressTint" format="color|reference" />
+        <!--进度条次色调的叠加模式-->
+        <attr name="mpb_secondaryProgressTintMode" format="enum">
+            <enum name="src_over" value="3" />
+            <enum name="src_in" value="5" />
+            <enum name="src_atop" value="9" />
+            <enum name="multiply" value="14" />
+            <enum name="screen" value="15" />
+            <enum name="add" value="16" />
+        </attr>
+        <!--进度条背景的色调-->
+        <attr name="mpb_progressBackgroundTint" format="color|reference" />
+        <!--进度条背景色调的叠加模式-->
+        <attr name="mpb_progressBackgroundTintMode" format="enum">
+            <enum name="src_over" value="3" />
+            <enum name="src_in" value="5" />
+            <enum name="src_atop" value="9" />
+            <enum name="multiply" value="14" />
+            <enum name="screen" value="15" />
+            <enum name="add" value="16" />
+        </attr>
+
+        <!--不确定进度的进度条色调-->
+        <attr name="mpb_indeterminateTint" format="color|reference" />
+        <!--不确定进度的进度条色调的叠加模式-->
+        <attr name="mpb_indeterminateTintMode" format="enum">
+            <enum name="src_over" value="3" />
+            <enum name="src_in" value="5" />
+            <enum name="src_atop" value="9" />
+            <enum name="multiply" value="14" />
+            <enum name="screen" value="15" />
+            <enum name="add" value="16" />
+        </attr>
+    </declare-styleable>
+</resources>

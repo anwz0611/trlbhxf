@@ -1,0 +1,57 @@
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/zoom_bg"
+    android:orientation="vertical"
+    android:layout_width="45dp"
+    android:layout_height="95dp"
+    android:gravity="center"
+    android:background="@drawable/sddman_shadow_bg"
+    tools:ignore="MissingDefaultResource">
+    <LinearLayout
+        android:id="@+id/Path_layout"
+        android:layout_width="45dp"
+        android:layout_height="42.5dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/zoom_button_topcorner">
+
+        <ToggleButton
+            android:id="@+id/activity_map_togbtnPath"
+            android:layout_width="@dimen/zoom_btn_size"
+            android:layout_height="22dp"
+            android:background="@mipmap/location_btn_path_off"
+            android:padding="@dimen/zoom_btn_padding"
+            android:text="ToggleButton"
+            android:textOff=" "
+            android:textOn=" " />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/spilt_line111"
+        android:layout_width="31.5dp"
+        android:layout_height="0.5dp"
+        android:background="#293341FF"
+        tools:ignore="DuplicateIds" />
+
+    <LinearLayout
+        android:id="@+id/Location_layout"
+        android:layout_width="45dp"
+        android:layout_height="42.5dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/zoom_button_topcorner">
+        <ImageView
+            android:id="@+id/activity_map_Location"
+            android:layout_width="@dimen/zoom_btn_size"
+            android:layout_height="@dimen/zoom_btn_size"
+            android:padding="@dimen/zoom_btn_padding"
+            android:src="@mipmap/location_btn_off" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/spilt_line"
+        android:layout_width="31.5dp"
+        android:layout_height="0.5dp"
+        android:background="#293341FF"/>
+
+</LinearLayout>

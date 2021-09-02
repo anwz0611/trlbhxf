@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">天然林保护修复</string>
+
+
+    <string name="title_scheme">方案管理</string>
+    <string name="title_layerManager">图层管理</string>
+    <string name="title_userManager">用户管理</string>
+    <string name="title_draw">绘制</string>
+    <string name="title_shadow">影像</string>
+    <string name="title_setting">设置</string>
+    <string name="allcheck">全选</string>
+    <string name="layar_allcheck">全部显示</string>
+    <string name="bottomlayer">底图管理</string>
+    <string name="appKid">"runtimeadvanced,1000,rud000551078,none,1JHD7XLS1MS4F5KHT239"</string>
+    <string name="app_company">版权所有 © 国家林业和草原局西北调查规划设计院</string>
+    <string name="complete">完成</string>
+    <string name="main_lxsjy">请选择离线数据源</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+</resources>

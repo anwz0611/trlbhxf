@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E0293341"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/gdf_RelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorAccent"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/gdf_close"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/zoom_button_topcorner"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="13dp"
+                android:src="@mipmap/info_back" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/gdf_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="表名"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold" />
+<!--        <Button-->
+<!--            android:id="@+id/gdf_save"-->
+<!--            android:layout_width="45dp"-->
+<!--            android:layout_height="25dp"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="15dp"-->
+<!--            android:background="@drawable/gdf_btn_bg"-->
+<!--            android:text="保存"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="@dimen/text_size2" />-->
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/gdf_RelativeLayout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+       />
+
+
+</RelativeLayout>
